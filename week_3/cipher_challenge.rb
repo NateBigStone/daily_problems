@@ -84,8 +84,7 @@ def decoded_cipher(coded_message)
         decoded_sentence << cipher[index_var + 22]
       end  
     end
-  decoded_sentence = decoded_sentence.join("")
-  return decoded_sentence
+  return decoded_sentence.join("")
 end
 
 # DRIVER TESTS GO BELOW THIS LINE
