@@ -1,9 +1,9 @@
 
-def mutation?(second_word,first_word)
+def mutation?(first_word,second_word)
   first_array = first_word.split("")
   second_array = second_word.split("")
-  first_array.each do |letter|
-    if second_array.include?(letter)
+  second_array.each do |letter|
+    if first_array.include?(letter)
     else
       return false
     end
