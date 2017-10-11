@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hamilton Example</title>
+  <style>
+    .hidden {
+        display: none;
+    }
+    .red {
+        color: red;
+    }
+    .move {
+        padding-left: 100px;
+    }
+
+  </style>
+
+
+  </head>
+<body>
+
+<h1 onmouseover="toggleDetails()" onclick="showCoords(event)">Alexander Hamilton</h1>
+  <p>Alexander Hamilton (January 11, 1755 or 1757 – July 12, 1804) was an American statesman and one of the Founding Fathers of the United States. He was an influential interpreter and promoter of the U.S. Constitution, as well as the founder of the nation’s financial system, the Federalist Party, the United States Coast Guard, and The New York Post newspaper.</p>
+<p id="demo"></p>
+<button type="button" onclick="redText(event)">Red Header!</button>
+<button type="button" onclick="moveText(event)">Move Header!</button>
+
+<script>
+function toggleDetails() {
+  var ptag = document.querySelector('p');
+  ptag.classList.toggle('hidden');
+}
+</script>
+
+<script>
+function showCoords(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  var coords = "X coords: " + x + ", Y coords: " + y;
+  document.getElementById("demo").innerHTML = coords;
+}
+</script>
+
+<script>
+function redText() {
+  var h1 = document.querySelector('h1');
+  h1.classList.toggle('red');
+}
+</script>
+
+<script>
+function moveText() {
+  var h1 = document.querySelector('h1');
+  h1.classList.toggle('move');
+}
+</script>
+
+
+</body>
+</html>
